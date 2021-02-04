@@ -1,2 +1,24 @@
-# Progress_Tracker
-A web app that tracks your course progress. Frontend: React and Redux. Backend: Ruby on Rails Api. The app takes input from user regarding current progress and calculate the remaining tasks percentage.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
