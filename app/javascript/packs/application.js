@@ -4,7 +4,6 @@
 // that code so it'll be compiled.
 
 import '../src/font-awesome.js';
-import 'stylesheets/application'
 
 require('@rails/ujs').start();
 require('turbolinks').start();
