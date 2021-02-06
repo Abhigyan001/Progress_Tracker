@@ -12,7 +12,7 @@ const DayStats = () => {
     <>
       <div className="daily-stats">
         <div className="row reading-header">
-          <h4>24-September-2019</h4>
+          <h4>Today</h4>
         </div>
         <div className="row graph-box">
           <div className="row">
@@ -20,7 +20,7 @@ const DayStats = () => {
               <Circle>
                 <CircularProgressbar
                   value={percentage}
-                  text={`${percentage}%`}
+                  text={`${percentage} Units`}
                   strokeWidth={5}
                   styles={buildStyles({
                     textColor: '#4b627a',
@@ -30,7 +30,7 @@ const DayStats = () => {
               </Circle>
               <div className="text-center">
                 <h6>Total</h6>
-                <h6>Consumption</h6>
+                <h6>Progress</h6>
               </div>
             </div>
             <div className="col">
@@ -76,7 +76,7 @@ const DayStats = () => {
                   <i className="fas fa-bed fa-4x" />
                 </div>
                 <div className="col">
-                  <p>Bedroom</p>
+                  <p>Html</p>
                   <h4>8 Units</h4>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const DayStats = () => {
                   <i className="fas fa-laptop fa-4x" />
                 </div>
                 <div className="col">
-                  <p>Study</p>
+                  <p>CSS</p>
                   <h4>8 Units</h4>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const DayStats = () => {
                   <i className="fas fa-car fa-4x" />
                 </div>
                 <div className="col">
-                  <p>Garage</p>
+                  <p>Javascript</p>
                   <h4>8 Units</h4>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const DayStats = () => {
                   <i className="fas fa-couch fa-4x" />
                 </div>
                 <div className="col">
-                  <p>Living</p>
+                  <p>React</p>
                   <h4>8 Units</h4>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const DayStats = () => {
                   <i className="fas fa-utensils fa-4x" />
                 </div>
                 <div className="col">
-                  <p>Kitchen</p>
+                  <p>RubyOnRails</p>
                   <h4>8 Units</h4>
                 </div>
               </div>
@@ -135,7 +135,7 @@ const DayStats = () => {
                   <i className="fas fa-user-clock fa-4x" />
                 </div>
                 <div className="col">
-                  <p>Guest</p>
+                  <p>Ruby</p>
                   <h4>8 Units</h4>
                 </div>
               </div>
