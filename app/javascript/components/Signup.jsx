@@ -26,7 +26,15 @@ class Signup extends React.Component {
     } = this.state;
 
     axios.post('/api/users', {
-      name, email, password, password_confirmation, units, target,
+      // name, email, password, password_confirmation, units, target,
+      user: {
+        name,
+        email,
+        password,
+        password_confirmation,
+        units,
+        target,
+      },
     })
       .then(response => response.data)
       .then(response => {
@@ -143,7 +151,7 @@ class Signup extends React.Component {
                       value={units}
                       onChange={e => this.handleChange(e)}
                     >
-                      <option defaultValue>Select current progress</option>
+                       <option defaultValue>Select current progress</option>
                       <option value="10">10%</option>
                       <option value="20">20%</option>
                        <option value="30">30%</option>
@@ -158,7 +166,7 @@ class Signup extends React.Component {
                       value={target}
                       onChange={e => this.handleChange(e)}
                     >
-                      <option selected>Target progress at EOD</option>
+                       <option selected>Target progress at EOD</option>
                   <option value="15">15%</option>
                                   
                   <option value="25">25%</option>
