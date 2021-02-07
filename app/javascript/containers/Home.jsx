@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import Head from '../components/Head';
+import Head from '../components/home/Head';
 import Signin from '../components/home/Signin';
 import Signup from '../components/home/Signup';
 
