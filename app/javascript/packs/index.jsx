@@ -5,5 +5,5 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from './App';
 
 document.addEventListener('DOMContentLoaded', () => {
-  render(<App />, document.body.appendChild(document.createElement('power_tracker')));
+  render(<App />, document.body.appendChild(document.createElement('progress_tracker')));
 });

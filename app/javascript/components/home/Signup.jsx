@@ -154,12 +154,10 @@ class Signup extends React.Component {
                 value={units}
                 onChange={e => this.handleChange(e)}
               >
-                <option defaultValue>Select current progress</option>
-                <option value="10">10%</option>
-                <option value="20">20%</option>
-                <option value="30">30%</option>
-                <option value="40">40%</option>
-                <option value="50">50%</option>
+                <option>Enter Total Study Hours</option>
+                <option value="1800">1800</option>
+                <option value="2100">2100</option>
+                <option value="2400">2400</option>                
               </select>
             </div>
             <div className="form-group">
@@ -169,12 +167,12 @@ class Signup extends React.Component {
                 value={target}
                 onChange={e => this.handleChange(e)}
               >
-                <option selected>Target progress at EOD</option>
+                <option>Target progress at EOD</option>
+                <option value="5">5%</option>
+                <option value="10">10%</option>
                 <option value="15">15%</option>
+                <option value="20">20%</option>
                 <option value="25">25%</option>
-                <option value="45">45%</option>
-                <option value="65">65%</option>
-                <option value="75">75%</option>
               </select>
             </div>
           </fieldset>

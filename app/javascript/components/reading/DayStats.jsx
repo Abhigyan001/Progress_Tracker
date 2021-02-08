@@ -61,7 +61,7 @@ export class DailyStats extends React.Component {
   render() {
     const { reading, user } = this.state;
     const quota = (Number(user.units) / 30);
-    const consumptionPc = Math.floor(((Number(reading.consumption)) / quota) * 100);
+    const consumptionPc = Math.floor(((Number(reading.progress)) / quota) * 100);
     const availablePC = Math.floor(((Number(reading.available)) / quota) * 100);
     return (
       <>
@@ -85,7 +85,7 @@ export class DailyStats extends React.Component {
                     >
                       <div className="circle-text">
                         <strong className="circle-strong">
-                          {reading.consumption}
+                          {reading.progress}
                         </strong>
                         <br />
                         {' '}
@@ -125,7 +125,7 @@ export class DailyStats extends React.Component {
                 <div className="col">
                   <Circle>
                     <CircularProgressbarWithChildren
-                      value={reading.saved}
+                      value={reading.left}
                       strokeWidth={5}
                       styles={buildStyles({
                         textColor: '#4b627a',
@@ -135,7 +135,7 @@ export class DailyStats extends React.Component {
                     >
                       <div className="circle-text">
                         <strong className="circle-strong">
-                          {reading.saved}
+                          {reading.left}
                           %
                         </strong>
                       </div>
@@ -157,7 +157,7 @@ export class DailyStats extends React.Component {
                     <header className="col room-units">
                       <p className="m-0">HTML</p>
                       <h4>
-                        {reading.bedroom}
+                        {reading.html}
                         {' '}
                         Units
                       </h4>
@@ -172,7 +172,7 @@ export class DailyStats extends React.Component {
                     <header className="col room-units">
                       <p className="m-0">CSS</p>
                       <h4>
-                        {reading.study}
+                        {reading.css}
                         {' '}
                         Units
                       </h4>
@@ -189,7 +189,7 @@ export class DailyStats extends React.Component {
                     <header className="col room-units">
                       <p className="m-0">Ruby</p>
                       <h4>
-                        {reading.garage}
+                        {reading.ruby}
                         {' '}
                         Units
                       </h4>
@@ -204,7 +204,7 @@ export class DailyStats extends React.Component {
                     <header className="col room-units">
                       <p className="m-0">RubyonRails</p>
                       <h4>
-                        {reading.living}
+                        {reading.rubyonrails}
                         {' '}
                         units
                       </h4>
@@ -221,7 +221,7 @@ export class DailyStats extends React.Component {
                     <header className="col room-units">
                       <p className="m-0">Javascript</p>
                       <h4>
-                        {reading.kitchen}
+                        {reading.javascript}
                         {' '}
                         Units
                       </h4>
@@ -236,7 +236,7 @@ export class DailyStats extends React.Component {
                     <header className="col room-units">
                       <p className="m-0">React</p>
                       <h4>
-                        {reading.guest}
+                        {reading.react}
                         {' '}
                         Units
                       </h4>

@@ -9,6 +9,8 @@ export function Html(props) {
     return null;
   }
   const quota = Number(props.quota);
+  console.log(quota);
+  console.log('test');  
   const units = !props.html ? '' : (Number(props.html) / quota) * 100;
   return (
     <>
