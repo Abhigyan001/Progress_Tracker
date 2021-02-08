@@ -1,7 +1,6 @@
 class Api::V1::Users::SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
-
   def create
     @user = User.find_by(email: params[:user][:email])
     if @user&.authenticate(params[:user][:password])
@@ -17,20 +16,6 @@ class Api::V1::Users::SessionsController < ApplicationController
       render json: {
         code: 400,
         errors: { Error: ['Email and/or Password don\'t match !'] }
-      }
-    end
-  end
-
-  def is_logged_in?
-    if logged_in? && current_user
-      render json: {
-        logged_in: true,
-        user: current_user
-      }
-    else
-      render json: {
-        logged_in: false,
-        message: 'no such user'
       }
     end
   end
