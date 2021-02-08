@@ -89,7 +89,7 @@ export class DailyStats extends React.Component {
                         </strong>
                         <br />
                         {' '}
-                        Units
+                        Minutes
                       </div>
                     </CircularProgressbarWithChildren>
                   </Circle>
@@ -114,7 +114,7 @@ export class DailyStats extends React.Component {
                         </strong>
                         <br />
                         {' '}
-                        Units
+                        Minutes
                       </div>
                     </CircularProgressbarWithChildren>
                   </Circle>
@@ -159,7 +159,7 @@ export class DailyStats extends React.Component {
                       <h4>
                         {reading.html}
                         {' '}
-                        Units
+                        mins
                       </h4>
                     </header>
                   </div>
@@ -174,7 +174,7 @@ export class DailyStats extends React.Component {
                       <h4>
                         {reading.css}
                         {' '}
-                        Units
+                        mins
                       </h4>
                     </header>
                   </div>
@@ -191,7 +191,7 @@ export class DailyStats extends React.Component {
                       <h4>
                         {reading.ruby}
                         {' '}
-                        Units
+                        mins
                       </h4>
                     </header>
                   </div>
@@ -206,7 +206,7 @@ export class DailyStats extends React.Component {
                       <h4>
                         {reading.rubyonrails}
                         {' '}
-                        units
+                        mins
                       </h4>
                     </header>
                   </div>
@@ -223,7 +223,7 @@ export class DailyStats extends React.Component {
                       <h4>
                         {reading.javascript}
                         {' '}
-                        Units
+                        mins
                       </h4>
                     </header>
                   </div>
@@ -238,7 +238,7 @@ export class DailyStats extends React.Component {
                       <h4>
                         {reading.react}
                         {' '}
-                        Units
+                        mins
                       </h4>
                     </header>
                   </div>

@@ -15,7 +15,7 @@ export function Html(props) {
   return (
     <>
       <div className="row justify-content-center reading-header">
-        <h4>Enter your HTML module progress</h4>
+        <h4>Time spent on HTML module?</h4>
       </div>
       <div className="row justify-content-center">
         <div className="graph-content">
@@ -28,7 +28,7 @@ export function Html(props) {
           id="html"
           name="html"
           type="number"
-          placeholder={`Enter HTML progress units between 1 to ${Math.floor(quota)}`}
+          placeholder={`Enter time in minutes between 1 to ${Math.floor(quota)}`}
           value={props.html}
           onChange={props.handleChange}
           required
@@ -57,7 +57,7 @@ export function Css(props) {
   return (
     <>
       <div className="row justify-content-center reading-header">
-        <h4>Enter your CSS module progress</h4>
+        <h4>Time spent on CSS module?</h4>
       </div>
       <div className="row justify-content-center">
         <div className="graph-content">
@@ -70,7 +70,7 @@ export function Css(props) {
           id="css"
           name="css"
           type="number"
-          placeholder={`Enter CSS progress units between 1 to ${Math.floor(props.quota)}`}
+          placeholder={`Enter time in minutes between 1 to ${Math.floor(props.quota)}`}
           value={props.css}
           onChange={props.handleChange}
           required
@@ -98,7 +98,7 @@ export function Ruby(props) {
   return (
     <>
       <header className="row justify-content-center reading-header">
-        <h4>Enter your Ruby module progress</h4>
+        <h4>Time spent on Ruby module?</h4>
       </header>
       <div className="row justify-content-center">
         <div className="graph-content">
@@ -111,7 +111,7 @@ export function Ruby(props) {
           id="ruby"
           name="ruby"
           type="number"
-          placeholder={`Enter Ruby progress units between 1 to ${Math.floor(props.quota)}`}
+          placeholder={`Enter time in minutes between 1 to ${Math.floor(props.quota)}`}
           value={props.ruby}
           onChange={props.handleChange}
           required
@@ -139,7 +139,7 @@ export function Rubyonrails(props) {
   return (
     <>
       <header className="row justify-content-center reading-header">
-        <h4>Enter your RubyonRails module progress</h4>
+        <h4>Time spent on RubyonRails module?</h4>
       </header>
       <div className="row justify-content-center">
         <div className="graph-content">
@@ -152,7 +152,7 @@ export function Rubyonrails(props) {
           id="rubyonrails"
           name="rubyonrails"
           type="number"
-          placeholder={`Enter RubyonRails progress units between 1 to ${Math.floor(props.quota)}`}
+          placeholder={`Enter time in minutes between 1 to ${Math.floor(props.quota)}`}
           value={props.rubyonrails}
           onChange={props.handleChange}
           required
@@ -177,7 +177,7 @@ export function Javascript(props) {
   return (
     <>
       <header className="row justify-content-center reading-header">
-        <h4>Enter your Javascript module progress</h4>
+        <h4>Time spent on Javascript module?</h4>
       </header>
       <div className="row justify-content-center">
         <div className="graph-content">
@@ -190,7 +190,7 @@ export function Javascript(props) {
           id="javascript"
           name="javascript"
           type="number"
-          placeholder={`Enter Javascript progress units between 1 to ${Math.floor(props.quota)}`}
+          placeholder={`Enter time in minutes between 1 to ${Math.floor(props.quota)}`}
           value={props.javascript}
           onChange={props.handleChange}
           required
@@ -218,7 +218,7 @@ export function Reacts(props) {
   return (
     <>
       <header className="row justify-content-center reading-header">
-        <h4>Enter your React module progress</h4>
+        <h4>Time spent on React module?</h4>
       </header>
       <div className="row justify-content-center">
         <div className="graph-content">
@@ -231,7 +231,7 @@ export function Reacts(props) {
           id="react"
           name="react"
           type="number"
-          placeholder={`Enter React progress units between 1 to ${Math.floor(props.quota)}`}
+          placeholder={`Enter time in minutes between 1 to ${Math.floor(props.quota)}`}
           value={props.react}
           onChange={props.handleChange}
           required

@@ -60,9 +60,9 @@ class ReadingList extends React.Component {
           </div>
           <div className="row container saving-list">
             <span>
-              Module Left:
+              Time Left:
               {' '}
-              {reading.saved}
+              {reading.left}
               %
             </span>
           </div>
@@ -70,7 +70,7 @@ class ReadingList extends React.Component {
         <div className="col-3 container graph-valuebox">
           <div className="row graph-value">
             {reading.available}
-            <span className="read-units">Units</span>
+            <span className="read-units">mins</span>
             <br />
             <span className="read-sym">
               <Link to={`/user/${reading.user_id}/reading/${reading.id}`}>

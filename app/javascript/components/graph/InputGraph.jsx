@@ -53,7 +53,7 @@ const InputGraph = ({ strokeWidth, percentage, display }) => {
           textAnchor: 'middle',
         }}
       >
-        {`${display} Units`}
+        {`${display} Minutes`}
       </text>
     </svg>
   );
