@@ -1,6 +1,6 @@
 class Reading < ApplicationRecord
   belongs_to :user
-  validates :bedroom, :study, :garage,
-            :living, :kitchen, :guest,
+  validates :html, :css, :ruby,
+            :rubyonrails, :javascript, :react,
             :consumption, :available, :saved, presence: true
 end
