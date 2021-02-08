@@ -4,39 +4,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import InputGraph from '../graph/InputGraph';
 
-export function Bedroom(props) {
+export function Html(props) {
   if (props.currentStep !== 1) {
     return null;
   }
   const quota = Number(props.quota);
-  const units = !props.bedroom ? '' : (Number(props.bedroom) / quota) * 100;
+  const units = !props.html ? '' : (Number(props.html) / quota) * 100;
   return (
     <>
       <div className="row justify-content-center reading-header">
-        <h4>Take your Bedroom Reading</h4>
+        <h4>Enter your HTML module progress</h4>
       </div>
       <div className="row justify-content-center">
         <div className="graph-content">
-          <InputGraph strokeWidth={2} percentage={units} display={props.bedroom} />
+          <InputGraph strokeWidth={2} percentage={units} display={props.html} />
         </div>
       </div>
       <div className="row justify-content-center reading-input">
         <input
           className="form-control"
-          id="bedroom"
-          name="bedroom"
+          id="html"
+          name="html"
           type="number"
-          placeholder={`Enter bedroom units between 1 to ${Math.floor(quota)}`}
-          value={props.bedroom}
+          placeholder={`Enter HTML progress units between 1 to ${Math.floor(quota)}`}
+          value={props.html}
           onChange={props.handleChange}
+          required
         />
       </div>
     </>
   );
 }
 
-Bedroom.propTypes = {
-  bedroom: PropTypes.string.isRequired,
+Html.propTypes = {
+  html: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   currentStep: PropTypes.number.isRequired,
   quota: PropTypes.oneOfType([
@@ -45,39 +46,40 @@ Bedroom.propTypes = {
   ]),
 };
 
-export function Study(props) {
+export function Css(props) {
   if (props.currentStep !== 2) {
     return null;
   }
 
-  const units = !props.study ? '' : (Number(props.study) / Number(props.quota)) * 100;
+  const units = !props.css ? '' : (Number(props.css) / Number(props.quota)) * 100;
   return (
     <>
       <div className="row justify-content-center reading-header">
-        <h4>Take your Study room Reading</h4>
+        <h4>Enter your CSS module progress</h4>
       </div>
       <div className="row justify-content-center">
         <div className="graph-content">
-          <InputGraph strokeWidth={2} percentage={units} display={props.study} />
+          <InputGraph strokeWidth={2} percentage={units} display={props.css} />
         </div>
       </div>
       <div className="row justify-content-center reading-input">
         <input
           className="form-control"
-          id="study"
-          name="study"
+          id="css"
+          name="css"
           type="number"
-          placeholder={`Enter study room units between 1 to ${Math.floor(props.quota)}`}
-          value={props.study}
+          placeholder={`Enter CSS progress units between 1 to ${Math.floor(props.quota)}`}
+          value={props.css}
           onChange={props.handleChange}
+          required
         />
       </div>
     </>
   );
 }
 
-Study.propTypes = {
-  study: PropTypes.string.isRequired,
+Css.propTypes = {
+  css: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   currentStep: PropTypes.number.isRequired,
   quota: PropTypes.oneOfType([
@@ -86,38 +88,39 @@ Study.propTypes = {
   ]),
 };
 
-export function Garage(props) {
+export function Ruby(props) {
   if (props.currentStep !== 3) {
     return null;
   }
-  const units = !props.garage ? '' : (Number(props.garage) / Number(props.quota)) * 100;
+  const units = !props.ruby ? '' : (Number(props.ruby) / Number(props.quota)) * 100;
   return (
     <>
-      <div className="row justify-content-center reading-header">
-        <h4>Take your Garage Reading</h4>
-      </div>
+      <header className="row justify-content-center reading-header">
+        <h4>Enter your Ruby module progress</h4>
+      </header>
       <div className="row justify-content-center">
         <div className="graph-content">
-          <InputGraph strokeWidth={2} percentage={units} display={props.garage} />
+          <InputGraph strokeWidth={2} percentage={units} display={props.ruby} />
         </div>
       </div>
       <div className="row justify-content-center reading-input">
         <input
           className="form-control"
-          id="garage"
-          name="garage"
+          id="ruby"
+          name="ruby"
           type="number"
-          placeholder={`Enter garage units between 1 to ${Math.floor(props.quota)}`}
-          value={props.garage}
+          placeholder={`Enter Ruby progress units between 1 to ${Math.floor(props.quota)}`}
+          value={props.ruby}
           onChange={props.handleChange}
+          required
         />
       </div>
     </>
   );
 }
 
-Garage.propTypes = {
-  garage: PropTypes.string.isRequired,
+Ruby.propTypes = {
+  ruby: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   currentStep: PropTypes.number.isRequired,
   quota: PropTypes.oneOfType([
@@ -126,75 +129,77 @@ Garage.propTypes = {
   ]),
 };
 
-export function Living(props) {
+export function Rubyonrails(props) {
   if (props.currentStep !== 4) {
     return null;
   }
-  const units = !props.living ? '' : (Number(props.living) / Number(props.quota)) * 100;
+  const units = !props.rubyonrails ? '' : (Number(props.rubyonrails) / Number(props.quota)) * 100;
   return (
     <>
-      <div className="row justify-content-center reading-header">
-        <h4>Take your Living Room Reading</h4>
-      </div>
+      <header className="row justify-content-center reading-header">
+        <h4>Enter your RubyonRails module progress</h4>
+      </header>
       <div className="row justify-content-center">
         <div className="graph-content">
-          <InputGraph strokeWidth={2} percentage={units} display={props.living} />
+          <InputGraph strokeWidth={2} percentage={units} display={props.rubyonrails} />
         </div>
       </div>
       <div className="row justify-content-center reading-input">
         <input
           className="form-control"
-          id="living"
-          name="living"
+          id="rubyonrails"
+          name="rubyonrails"
           type="number"
-          placeholder={`Enter living room units between 1 to ${Math.floor(props.quota)}`}
-          value={props.living}
+          placeholder={`Enter RubyonRails progress units between 1 to ${Math.floor(props.quota)}`}
+          value={props.rubyonrails}
           onChange={props.handleChange}
+          required
+
         />
       </div>
     </>
   );
 }
 
-Living.propTypes = {
-  living: PropTypes.string.isRequired,
+Rubyonrails.propTypes = {
+  rubyonrails: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   currentStep: PropTypes.number.isRequired,
-
 };
 
-export function Kitchen(props) {
+export function Javascript(props) {
   if (props.currentStep !== 5) {
     return null;
   }
-  const units = !props.kitchen ? '' : (Number(props.kitchen) / Number(props.quota)) * 100;
+  const units = !props.javascript ? '' : (Number(props.javascript) / Number(props.quota)) * 100;
   return (
     <>
-      <div className="row justify-content-center reading-header">
-        <h4>Take your Kitchen Reading</h4>
-      </div>
+      <header className="row justify-content-center reading-header">
+        <h4>Enter your Javascript module progress</h4>
+      </header>
       <div className="row justify-content-center">
         <div className="graph-content">
-          <InputGraph strokeWidth={2} percentage={units} display={props.kitchen} />
+          <InputGraph strokeWidth={2} percentage={units} display={props.javascript} />
         </div>
       </div>
       <div className="row justify-content-center reading-input">
         <input
           className="form-control"
-          id="kitchen"
-          name="kitchen"
+          id="javascript"
+          name="javascript"
           type="number"
-          placeholder={`Enter kitchen units between 1 to ${Math.floor(props.quota)}`}
-          value={props.kitchen}
+          placeholder={`Enter Javascript progress units between 1 to ${Math.floor(props.quota)}`}
+          value={props.javascript}
           onChange={props.handleChange}
+          required
         />
       </div>
     </>
   );
 }
 
-Kitchen.propTypes = {
-  kitchen: PropTypes.string.isRequired,
+Javascript.propTypes = {
+  javascript: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   currentStep: PropTypes.number.isRequired,
   quota: PropTypes.oneOfType([
@@ -203,30 +208,31 @@ Kitchen.propTypes = {
   ]),
 };
 
-export function Guest(props) {
+export function Reacts(props) {
   if (props.currentStep !== 6) {
     return null;
   }
-  const units = !props.guest ? '' : (Number(props.guest) / Number(props.quota)) * 100;
+  const units = !props.react ? '' : (Number(props.react) / Number(props.quota)) * 100;
   return (
     <>
-      <div className="row justify-content-center reading-header">
-        <h4>Take your Guest Room Reading</h4>
-      </div>
+      <header className="row justify-content-center reading-header">
+        <h4>Enter your React module progress</h4>
+      </header>
       <div className="row justify-content-center">
         <div className="graph-content">
-          <InputGraph strokeWidth={2} percentage={units} display={props.guest} />
+          <InputGraph strokeWidth={2} percentage={units} display={props.react} />
         </div>
       </div>
       <div className="row justify-content-center reading-input">
         <input
           className="form-control"
-          id="guest"
-          name="guest"
+          id="react"
+          name="react"
           type="number"
-          placeholder={`Enter guest room units between 1 to ${Math.floor(props.quota)}`}
-          value={props.guest}
+          placeholder={`Enter React progress units between 1 to ${Math.floor(props.quota)}`}
+          value={props.react}
           onChange={props.handleChange}
+          required
         />
       </div>
       <button className="btn btn-success btn-block">Submit</button>
@@ -234,8 +240,8 @@ export function Guest(props) {
   );
 }
 
-Guest.propTypes = {
-  guest: PropTypes.string.isRequired,
+Reacts.propTypes = {
+  react: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   currentStep: PropTypes.number.isRequired,
   quota: PropTypes.oneOfType([

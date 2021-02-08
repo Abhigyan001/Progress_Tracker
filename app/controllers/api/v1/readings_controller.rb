@@ -70,15 +70,15 @@ class Api::V1::ReadingsController < ApplicationController
 
   def reading_params
     params.require(:reading).permit(
-      :bedroom,
-      :study,
-      :garage,
-      :living,
-      :kitchen,
-      :guest,
-      :consumption,
+      :html,
+      :css,
+      :ruby,
+      :rubyonrails,
+      :javascript,
+      :react,
+      :progress,
       :available,
-      :saved
+      :left
     )
   end
 end

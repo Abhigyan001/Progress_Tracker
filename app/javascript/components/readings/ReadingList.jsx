@@ -60,7 +60,7 @@ class ReadingList extends React.Component {
           </div>
           <div className="row container saving-list">
             <span>
-              Units saved:
+              Module Left:
               {' '}
               {reading.saved}
               %
@@ -83,9 +83,9 @@ class ReadingList extends React.Component {
     ));
     return (
       <>
-        <div className="readlist">
+        <section className="readlist">
           {readings.length > 0 ? allReadings : ''}
-        </div>
+        </section>
       </>
     );
   }

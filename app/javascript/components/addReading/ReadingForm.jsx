@@ -4,25 +4,25 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
-  Bedroom,
-  Study,
-  Garage,
-  Living,
-  Kitchen,
-  Guest,
-} from './Rooms';
+  Html,
+  Css,
+  Ruby,
+  Rubyonrails,
+  Javascript,
+  Reacts,
+} from './Subjects';
 
 class ReadingForm extends React.Component {
   constructor(props) {
     super(props);
     const defaultState = {
       currentStep: 1,
-      bedroom: '',
-      study: '',
-      garage: '',
-      living: '',
-      kitchen: '',
-      guest: '',
+      html: '',
+      css: '',
+      ruby: '',
+      rubyonrails: '',
+      javascript: '',
+      react: '',
       units: '',
       quota: '',
     };
@@ -68,18 +68,18 @@ class ReadingForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const {
-      bedroom, study, garage, living, kitchen, guest, units,
+      html, css, ruby, rubyonrails, javascript, react, units,
     } = this.state;
-    const consumption = Number(bedroom)
-    + Number(study)
-    + Number(garage)
-    + Number(living)
-    + Number(kitchen)
-    + Number(guest);
-    const available = (units / 30) - consumption;
-    const saved = Math.floor(100 - (100 * (consumption / (units / 30))));
+    const progress = Number(html)
+    + Number(css)
+    + Number(ruby)
+    + Number(rubyonrails)
+    + Number(javascript)
+    + Number(react);
+    const available = (units / 30) - progress;
+    const left = Math.floor(100 - (100 * (progress / (units / 30))));
     axios.post('/api/v1/readings', {
-      bedroom, study, garage, living, kitchen, guest, consumption, available, saved,
+      html, css, ruby, rubyonrails, javascript, react, progress, available, left,
     })
       .then(response => response.data)
       .then(response => {
@@ -89,14 +89,14 @@ class ReadingForm extends React.Component {
           });
         } else if (response.code === 200) {
           this.setState({
-            bedroom: '',
-            study: '',
-            garage: '',
-            living: '',
-            kitchen: '',
-            consumption: '',
+            html: '',
+            css: '',
+            ruby: '',
+            rubyonrails: '',
+            javascript: '',
+            progress: '',
             available: '',
-            saved: '',
+            left: '',
           });
           this.props.history.push('/readings');
         }
@@ -155,47 +155,41 @@ class ReadingForm extends React.Component {
     return (
       <>
         <form id="regForm" onSubmit={this.handleSubmit}>
-          <Bedroom
+          <Html
             currentStep={this.state.currentStep}
             quota={this.state.quota}
             handleChange={this.handleChange}
-            bedroom={this.state.bedroom}
-            units={Math.floor(100 - (100 * (consumption / (units / 30))));}
+            html={this.state.html}
           />
-          <Study
+          <Css
             currentStep={this.state.currentStep}
             quota={this.state.quota}
             handleChange={this.handleChange}
-            study={this.state.study}
-            units={Math.floor(100 - (100 * (consumption / (units / 30))));}
+            css={this.state.css}
           />
-          <Garage
+          <Ruby
             currentStep={this.state.currentStep}
             quota={this.state.quota}
             handleChange={this.handleChange}
-            garage={this.state.garage}
-            units={Math.floor(100 - (100 * (consumption / (units / 30))));}
+            ruby={this.state.ruby}
           />
-          <Living
+          <Rubyonrails
             currentStep={this.state.currentStep}
             quota={this.state.quota}
             handleChange={this.handleChange}
-            living={this.state.living}
-            units={Math.floor(100 - (100 * (consumption / (units / 30))));}
+            rubyonrails={this.state.rubyonrails}
           />
-          <Kitchen
+          <Javascript
             currentStep={this.state.currentStep}
             quota={this.state.quota}
             handleChange={this.handleChange}
-            kitchen={this.state.kitchen}
-            units={Math.floor(100 - (100 * (consumption / (units / 30))));}
+            javascript={this.state.javascript}
           />
-          <Guest
+          <Reacts
             currentStep={this.state.currentStep}
             quota={this.state.quota}
             handleChange={this.handleChange}
-            guest={this.state.guest}
-            units={Math.floor(100 - (100 * (consumption / (units / 30))));}
+            react={this.state.react}
           />
           <div className="row justify-content-center btn-box">
             {this.previousButton()}
@@ -208,8 +202,7 @@ class ReadingForm extends React.Component {
 }
 
 ReadingForm.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  history: PropTypes.object.isRequired,
+  history: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default withRouter(ReadingForm);

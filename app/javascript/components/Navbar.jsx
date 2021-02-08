@@ -15,7 +15,7 @@ const Navbar = () => (
         <li className="col foot-col nav-item">
           <a onClick={() => window.location.href = '/addreading'} className="nav-link" data-toggle="pill" href="#">
             <FontAwesomeIcon icon={faChartBar} className="navIcon" />
-            <p>Add Readings</p>
+            <p>Add Progress</p>
           </a>
         </li>
         <li className="col foot-col nav-item">

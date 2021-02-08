@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faBed,
+  faFile,
   faLaptop,
   faCar,
   faCouch,
@@ -23,14 +23,15 @@ export class DailyStats extends React.Component {
     super(props);
     this.state = {
       reading: {
-        bedroom: '',
-        living: '',
-        study: '',
-        guest: '',
-        kitchen: '',
-        saved: '',
+        html: '',
+        css: '',
+        ruby: '',
+        rubyonrails: '',
+        javascript: '',
+        react: '',
+        left: '',
         available: '',
-        consumption: '',
+        progress: '',
       },
       user: {
         units: '',
@@ -64,12 +65,12 @@ export class DailyStats extends React.Component {
     const availablePC = Math.floor(((Number(reading.available)) / quota) * 100);
     return (
       <>
-        <div>
+        <main>
           <div className="daily-stats" index={reading.id}>
-            <div className="row reading-header">
+            <section className="row reading-header">
               <h4>{moment(reading.created_at).format('DD MMM YYYY')}</h4>
-            </div>
-            <div className="row graph-box">
+            </section>
+            <section className="row graph-box">
               <div className="row">
                 <div className="col">
                   <Circle>
@@ -92,9 +93,9 @@ export class DailyStats extends React.Component {
                       </div>
                     </CircularProgressbarWithChildren>
                   </Circle>
-                  <div className="text-center">
-                    <h6>Total</h6>
-                  </div>
+                  <header className="text-center">
+                    <h6>Progress</h6>
+                  </header>
                 </div>
                 <div className="col">
                   <Circle>
@@ -117,9 +118,9 @@ export class DailyStats extends React.Component {
                       </div>
                     </CircularProgressbarWithChildren>
                   </Circle>
-                  <div className="text-center">
+                  <header className="text-center">
                     <h6>Available</h6>
-                  </div>
+                  </header>
                 </div>
                 <div className="col">
                   <Circle>
@@ -140,29 +141,27 @@ export class DailyStats extends React.Component {
                       </div>
                     </CircularProgressbarWithChildren>
                   </Circle>
-                  <div className="text-center">
-                    <h6>
-                      Saved
-                    </h6>
-                  </div>
+                  <header className="text-center">
+                    <h6>Left</h6>
+                  </header>
                 </div>
               </div>
-            </div>
-            <div className="rows">
+            </section>
+            <section className="rows">
               <div className="row">
                 <div className="col room-card">
                   <div className="row">
                     <div className="col">
-                      <FontAwesomeIcon icon={faBed} className="dayStat" size="4x" />
+                      <FontAwesomeIcon icon={faFile} className="dayStat" size="4x" />
                     </div>
-                    <div className="col room-units">
-                      <p className="m-0">Bedroom</p>
+                    <header className="col room-units">
+                      <p className="m-0">HTML</p>
                       <h4>
                         {reading.bedroom}
                         {' '}
                         Units
                       </h4>
-                    </div>
+                    </header>
                   </div>
                 </div>
                 <div className="col room-card">
@@ -170,14 +169,14 @@ export class DailyStats extends React.Component {
                     <div className="col">
                       <FontAwesomeIcon icon={faLaptop} className="dayStat" size="4x" />
                     </div>
-                    <div className="col room-units">
-                      <p className="m-0">Study</p>
+                    <header className="col room-units">
+                      <p className="m-0">CSS</p>
                       <h4>
                         {reading.study}
                         {' '}
                         Units
                       </h4>
-                    </div>
+                    </header>
                   </div>
                 </div>
               </div>
@@ -187,14 +186,14 @@ export class DailyStats extends React.Component {
                     <div className="col">
                       <FontAwesomeIcon icon={faCar} className="dayStat" size="4x" />
                     </div>
-                    <div className="col room-units">
-                      <p className="m-0">Garage</p>
+                    <header className="col room-units">
+                      <p className="m-0">Ruby</p>
                       <h4>
                         {reading.garage}
                         {' '}
                         Units
                       </h4>
-                    </div>
+                    </header>
                   </div>
                 </div>
                 <div className="col room-card">
@@ -202,14 +201,14 @@ export class DailyStats extends React.Component {
                     <div className="col">
                       <FontAwesomeIcon icon={faCouch} className="dayStat" size="4x" />
                     </div>
-                    <div className="col room-units">
-                      <p className="m-0">Living</p>
+                    <header className="col room-units">
+                      <p className="m-0">RubyonRails</p>
                       <h4>
                         {reading.living}
                         {' '}
                         units
                       </h4>
-                    </div>
+                    </header>
                   </div>
                 </div>
               </div>
@@ -219,14 +218,14 @@ export class DailyStats extends React.Component {
                     <div className="col">
                       <FontAwesomeIcon icon={faUtensils} className="dayStat" size="4x" />
                     </div>
-                    <div className="col room-units">
-                      <p className="m-0">Kitchen</p>
+                    <header className="col room-units">
+                      <p className="m-0">Javascript</p>
                       <h4>
                         {reading.kitchen}
                         {' '}
                         Units
                       </h4>
-                    </div>
+                    </header>
                   </div>
                 </div>
                 <div className="col room-card">
@@ -234,20 +233,20 @@ export class DailyStats extends React.Component {
                     <div className="col">
                       <FontAwesomeIcon icon={faUserClock} className="dayStat" size="4x" />
                     </div>
-                    <div className="col room-units">
-                      <p className="m-0">Guest</p>
+                    <header className="col room-units">
+                      <p className="m-0">React</p>
                       <h4>
                         {reading.guest}
                         {' '}
                         Units
                       </h4>
-                    </div>
+                    </header>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
-        </div>
+        </main>
       </>
     );
   }
