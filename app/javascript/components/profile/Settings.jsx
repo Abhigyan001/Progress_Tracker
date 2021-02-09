@@ -16,7 +16,7 @@ const Settings = () => {
       <div className="row more-list">
         <div className="col-4 container">
           <div className="img-circle hor">
-            <img src={`https://robohash.org/${userName}?set=set2`} alt="Profile" />
+            <img src={`https://robohash.org/${userName}?set=set1`} alt="Profile" />
           </div>
         </div>
         <div className="col-8 container profile-content">

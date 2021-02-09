@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faFile,
+  faNewspaper,
   faLaptop,
-  faCar,
-  faCouch,
-  faUtensils,
-  faUserClock,
+  faFileAlt,
+  faFileCode,
+  faFolderPlus,
+  faFolderOpen,
 } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import axios from 'axios';
@@ -152,7 +152,7 @@ export class DailyStats extends React.Component {
                 <div className="col room-card">
                   <div className="row">
                     <div className="col">
-                      <FontAwesomeIcon icon={faFile} className="dayStat" size="4x" />
+                      <FontAwesomeIcon icon={faNewspaper} className="dayStat" size="4x" />
                     </div>
                     <header className="col room-units">
                       <p className="m-0">HTML</p>
@@ -184,7 +184,7 @@ export class DailyStats extends React.Component {
                 <div className="col room-card">
                   <div className="row">
                     <div className="col">
-                      <FontAwesomeIcon icon={faCar} className="dayStat" size="4x" />
+                      <FontAwesomeIcon icon={faFileAlt} className="dayStat" size="4x" />
                     </div>
                     <header className="col room-units">
                       <p className="m-0">Ruby</p>
@@ -199,7 +199,7 @@ export class DailyStats extends React.Component {
                 <div className="col room-card">
                   <div className="row">
                     <div className="col">
-                      <FontAwesomeIcon icon={faCouch} className="dayStat" size="4x" />
+                      <FontAwesomeIcon icon={faFileCode} className="dayStat" size="4x" />
                     </div>
                     <header className="col room-units">
                       <p className="m-0">RubyonRails</p>
@@ -216,7 +216,7 @@ export class DailyStats extends React.Component {
                 <div className="col room-card">
                   <div className="row">
                     <div className="col">
-                      <FontAwesomeIcon icon={faUtensils} className="dayStat" size="4x" />
+                      <FontAwesomeIcon icon={faFolderPlus} className="dayStat" size="4x" />
                     </div>
                     <header className="col room-units">
                       <p className="m-0">Javascript</p>
@@ -231,7 +231,7 @@ export class DailyStats extends React.Component {
                 <div className="col room-card">
                   <div className="row">
                     <div className="col">
-                      <FontAwesomeIcon icon={faUserClock} className="dayStat" size="4x" />
+                      <FontAwesomeIcon icon={faFolderOpen} className="dayStat" size="4x" />
                     </div>
                     <header className="col room-units">
                       <p className="m-0">React</p>

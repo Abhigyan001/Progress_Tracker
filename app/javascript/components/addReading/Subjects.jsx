@@ -8,9 +8,7 @@ export function Html(props) {
   if (props.currentStep !== 1) {
     return null;
   }
-  const quota = Number(props.quota);
-  console.log(quota);
-  console.log('test');  
+  const quota = Number(props.quota);   
   const units = !props.html ? '' : (Number(props.html) / quota) * 100;
   return (
     <>
@@ -139,7 +137,7 @@ export function Rubyonrails(props) {
   return (
     <>
       <header className="row justify-content-center reading-header">
-        <h4>Time spent on RubyonRails module?</h4>
+        <h4>Time spent on ROR module?</h4>
       </header>
       <div className="row justify-content-center">
         <div className="graph-content">
