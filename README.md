@@ -35,9 +35,9 @@ The requirements can be found [here](https://www.notion.so/Final-Capstone-Projec
 
 This is the workflow of the app:
 
-- The user is required to register with name, email, password, total hours available for study (300, 270, 240) and how much overall time the user wants to save (i.e. 5%, 10%, 15%, 20%, 25%).
+- The user is required to register with name, email, password, total hours available for study (300, 270, 240), and how much overall time the user wants to save (i.e. 5%, 10%, 15%, 20%, 25%).
 
-- Selected hours will be divided by numbers of days in a month to derive daily time available for study for each module, and the target saving time; which will be calculated against total progress to see if target is met.
+- Selected hours will be divided by the number of days in a month to derive the daily time available for study for each module, and the target saving time; which will be calculated against total progress to see if the target is met.
 
 - The user can log in by typing the mail and password.
 
@@ -62,8 +62,8 @@ This project was built using these technologies.
 * Node.js
 * ESLint
 * StyleLint
-* GithubActions :muscle:
-* VS Code :vscode:
+* GithubActions
+* VS Code
 
 <!-- INSTALLATION -->
 ## Usage
