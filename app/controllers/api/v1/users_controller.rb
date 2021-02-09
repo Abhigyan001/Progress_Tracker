@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
       render json: {
         code: 200
       }
-      
+
     else
       render json: {
         code: 400,
