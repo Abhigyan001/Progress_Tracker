@@ -1,10 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/Abhigyan001/Progress_Tracker.git">
@@ -15,9 +8,7 @@
 
   <p align="center">
     This is the final capstone project of Microverse!
-    <br />
-    <a href="https://github.com/Abhigyan001/Progress_Tracker.git"><strong>Explore the docs »</strong></a>
-    <br />
+    <br />    
     <br />
     <a href="https://github.com/Abhigyan001/Progress_Tracker/issues">Report Bug</a>
     ·
