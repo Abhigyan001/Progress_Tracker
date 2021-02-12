@@ -31,7 +31,6 @@
 ## About The Project
 
 The app is called Progress Tracker and its main functionality is to track how much time an user has spent on separate modules each day.
-The requirements can be found [here](https://www.notion.so/Final-Capstone-Project-Tracking-App-22e454da738c46efaf17721826841772) :point_left:
 
 This is the workflow of the app:
 
